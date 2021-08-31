@@ -1,0 +1,327 @@
+/*font-family: 'Poppins', sans-serif;*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-color: white;
+}
+.nav-item{
+    margin-right:50px;
+}
+
+.navbar-brand .img h1{
+    font-size: 50px;
+    font-weight: 700;
+}
+.banner{
+    background-image: url("img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+.banner_txt{
+    padding-top: 15%;
+   min-height: 100vh;
+   margin: auto;
+}
+
+.down{
+    font-size: 20px;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    position: absolute;
+    animation: updown 1s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes updown{
+    0%{
+        top: 80%;
+    }
+    100%{
+        top: 90%;
+    }
+}
+.banner h1{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+}
+.banner p{
+    margin-top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+}
+.banner-btn{
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #28ABE3;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
+
+.banner-btn:hover{
+    color: white;
+}
+.service_heading{
+    margin: auto;
+    width: 50%;
+}
+.service_heading h1{
+    font-size: 35px;
+    color: black;
+    font-family: 'Playfair Display', serif;
+}
+.service_heading p{
+    margin-top: 10px;
+    color: black;
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+}
+.service_heading span{
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    width: 100px;
+    height: 1px;
+    border: 1px solid #a4a9af;
+}
+
+.service_content{
+    border: 1px solid rgb(212, 206, 206);
+    padding: 20px;
+    margin-bottom: 25px;
+    transition: 0.3s all ease-in-out;
+    border-radius: 5px;
+}
+.service_content:hover{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.service_content i{
+    font-size: 80px;
+    color: #28ABE3;
+}
+.service_content h1{
+    font-size: 30px;
+    padding-top: 15px;
+   font-weight: 500;
+}
+.service_content p{
+    font-size: 17px;
+    padding-top: 10px;
+    font-family: 'Playfair Display', serif;
+}
+.agency{
+    background-color: #F7F7F7;
+}
+
+.agency_heading{
+    margin: auto;
+    width: 50%;
+}
+.agency_heading h1{
+    padding-top: 50px;
+    font-size: 35px;
+    color: black;
+    font-family: 'Playfair Display', serif;
+}
+.agency_heading p{
+    margin-top: 10px;
+    color: black;
+    font-size: 17px;
+    font-family: 'Playfair Display', serif;
+}
+.agency_heading span{
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+    width: 100px;
+    height: 1px;
+    border: 1px solid #a4a9af;
+}
+
+.agency_content h3{
+    font-size: 18px;
+    color: #777777;
+    padding-bottom: 25px;
+}
+.agency_content i{
+    color: #28ABE3;
+}
+.agency_img img{
+    width: 100%;
+    height: 100%;
+}
+.banner_2{
+    background-image: url("img/call-to-action-bg-2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.banner_2_text{
+    color: white;
+    margin: auto;
+    width: 60%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner_2_text h1{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Playfair Display', serif;
+
+}
+.banner_2_text p{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+}
+.points{
+    margin-bottom: 20px;
+}
+.points h1{
+    padding-top: 15px;
+    color: #444444;
+}
+.points h4{
+    font-size: 18px;
+    color: #444444;
+    font-weight: 500;
+    font-family: 'Playfair Display', serif;
+}
+.points i{
+    font-size: 50px;
+    color: #28ABE3;
+}
+.clint{
+    background-color: #28ABE3;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clint_row{
+    width: 60%;
+    margin: auto;
+}
+.clint_row i{
+    font-size: 65px;
+    color: white;
+}
+.clint_row p{
+    padding-top: 15px;
+    font-size: 18px;
+    color: white;
+
+}
+.clint_img{
+    margin: auto;
+}
+.clint_img img{ 
+    margin-top: -30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.clint_img h1{
+    padding-top: 15px;
+}
+
+.card_contant{
+    background-color: white;
+    margin-bottom: 30px;
+    transition: 0.3s all ease-in-out;
+}
+.card_contant_sub{
+    padding: 20px;
+}
+.card_contant_sub h1{
+    font-size: 35px;
+    font-weight: 500;
+    left: 0;
+    font-family: 'Playfair Display', serif;
+
+}
+.card_contant_sub p{
+    font-size: 18px;
+    left: 0;
+    font-family: 'Playfair Display', serif;
+
+}
+.card_contant:hover{
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+.card_btn{
+    color: white;
+    padding: 15px 40px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color:#28ABE3;
+    border-radius: 30px;
+}
+.card_btn:hover{
+    color: white;
+}
+footer{
+    background-color: #222222;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.footer_contatn{
+    color: white;
+}
+.footer_contatn h3{
+    text-align: left;
+    padding-top: 30px;
+    font-family: 'Playfair Display', serif;
+}
+.footer_contatn ul{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+}
+.footer_contatn ul li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+.footer_contatn ul li a{
+    text-decoration: none;
+    color: white;
+    margin-bottom: 10px;
+}
+.footer_contatn ul li a:hover{
+    color: #28ABE3;
+}
+.last_contant{
+    background-color: #1B1B1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.last_footer{
+    color: white;
+    margin: auto;
+}
+section{
+    width: 100%;
+}
