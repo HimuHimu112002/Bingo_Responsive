@@ -12,6 +12,39 @@ header{
 .nav-item{
     margin-right:50px;
 }
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #28ABE3;
+}
+.navbar-light .navbar-nav .nav-link{
+    position: relative;
+}
+.navbar-light .navbar-nav .nav-link::before{
+    content: '';
+    left: 10%;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #008ed6;
+    position: absolute;
+    transition: 0.3s all ease-in-out;
+   
+}
+.navbar-light .navbar-nav .nav-link::after{
+    content: '';
+    right: 10%;
+    bottom: 0;
+    width: 0%;
+    height: 1px;
+    background-color: #008ed6;
+    position: absolute;
+    transition: 0.3s all ease-in-out;
+}
+.navbar-light .navbar-nav .nav-link:hover::before{
+    width: 38%;
+}
+.navbar-light .navbar-nav .nav-link:hover::after{
+    width: 38%;
+}
 
 .navbar-brand .img h1{
     font-size: 50px;
@@ -23,12 +56,13 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    min-height: 100vh;
     position: relative;
 }
 .banner_txt{
     padding-top: 15%;
-   min-height: 100vh;
-   margin: auto;
+    min-height: 100vh;
+    margin: auto;
 }
 
 .down{
@@ -51,10 +85,14 @@ header{
 }
 .banner h1{
     text-align: center;
-    color: #28ABE3;
+    color: white;
     font-size: 35px;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
     font-family: 'Playfair Display', serif;
+}
+.banner h1 span{
+    color: #05e2ff;
 }
 .banner p{
     margin-top: 15px;
@@ -63,22 +101,25 @@ header{
     font-size: 17px;
     font-family: 'Playfair Display', serif;
 }
-.banner-btn{
+.banner-btn, .banner-btn1{
     color: white;
     padding: 10px 30px;
     font-size: 18px;
     text-transform: uppercase;
     background-color: #28ABE3;
+    border:  1px solid #28ABE3;
     box-shadow: none;
     margin-bottom: 10px;
 }
-
 .banner-btn:hover{
     color: white;
+    background: transparent;
 }
-.service_heading{
-    margin: auto;
-    width: 50%;
+.banner-btn1:hover{
+    background: transparent;
+}
+.banner-btn1{
+    margin-bottom: 50px;
 }
 .service_heading h1{
     font-size: 35px;
@@ -99,17 +140,31 @@ header{
     height: 1px;
     border: 1px solid #a4a9af;
 }
-
 .service_content{
     border: 1px solid rgb(212, 206, 206);
     padding: 20px;
     margin-bottom: 25px;
     transition: 0.3s all ease-in-out;
     border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.shape{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: .8;
+    display: none;
+    z-index: -1;
+}
+.service_content:hover .shape{
+    display: inherit;
 }
 .service_content:hover{
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     cursor: pointer;
+    color: white;
 }
 .service_content i{
     font-size: 80px;
@@ -127,11 +182,6 @@ header{
 }
 .agency{
     background-color: #F7F7F7;
-}
-
-.agency_heading{
-    margin: auto;
-    width: 50%;
 }
 .agency_heading h1{
     padding-top: 50px;
@@ -171,11 +221,19 @@ header{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+}
+.particles-js-canvas-el{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+.ll{
+    z-index: 99 !important;
 }
 .banner_2_text{
     color: white;
-    margin: auto;
-    width: 60%;
     min-height: 50vh;
     display: flex;
     justify-content: center;
@@ -186,7 +244,6 @@ header{
     text-align: center;
     font-size: 30px;
     font-family: 'Playfair Display', serif;
-
 }
 .banner_2_text p{
     text-align: center;
@@ -219,7 +276,6 @@ header{
     position: relative;
 }
 .clint_row{
-    width: 60%;
     margin: auto;
 }
 .clint_img{
@@ -280,14 +336,15 @@ header{
 }
 .card_btn{
     color: white;
-    padding: 15px 40px;
+    border-radius: 8px 0px 8px 0px;
     font-size: 18px;
     text-transform: uppercase;
     background-color:#28ABE3;
-    border-radius: 30px;
+    border: 1px solid #28ABE3;
 }
 .card_btn:hover{
-    color: white;
+    color: black;
+    background: transparent;
 }
 footer{
     background-color: #222222;
@@ -312,6 +369,7 @@ footer{
 .footer_contatn ul li{
     list-style-type: none;
     margin-bottom: 10px;
+    transition: .3s all ease-in-out;
 }
 .footer_contatn ul li a{
     text-decoration: none;
@@ -333,4 +391,57 @@ footer{
 }
 section{
     width: 100%;
+}
+
+.flex-center {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #60D7A9; */
+    background-color: white;
+}
+  
+.dots .dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px 0 10px;
+    border-radius: 50%;
+    background: #FC5B00;
+    -webkit-animation: dot-dot-dot 1.4s linear infinite;
+    animation: dot-dot-dot 1.4s linear infinite;
+}
+  
+.dots .dot:nth-child(2) {
+    animation-delay: .2s;
+}
+  
+.dots .dot:nth-child(3) {
+    animation-delay: .4s;
+}
+  
+@keyframes dot-dot-dot {
+    0%, 60%, 100% {
+      -webkit-transform: initial;
+        -ms-transform: initial;
+          transform: initial;
+}
+    30% {
+      -webkit-transform: translateY(-25px);
+        -ms-transform: translateY(-25px);
+          transform: translateY(-25px);
+    }
 }
